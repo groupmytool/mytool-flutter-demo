@@ -8,6 +8,7 @@ void main() {
         children: [
           MyApp(),
           MyButton(),
+          MyText(),
         ],
       ),
     ),
@@ -23,6 +24,8 @@ class MyApp extends StatelessWidget {
       child: Container(
         width: 200,
         height: 200,
+        margin: const EdgeInsets.fromLTRB(0, 40, 0, 0),
+        transform: Matrix4.rotationZ(0.2),
         decoration: BoxDecoration(
             color: Colors.yellow,
             border: Border.all(
@@ -31,8 +34,7 @@ class MyApp extends StatelessWidget {
             ),
             borderRadius: BorderRadius.circular(10),
             boxShadow: const [BoxShadow(color: Colors.blue, blurRadius: 20.0)],
-            gradient:
-                const LinearGradient(colors: [Colors.red, Colors.yellow])),
+            gradient: const LinearGradient(colors: [Colors.red, Colors.yellow])),
         alignment: Alignment.center,
         child: const Text(
           "你好 Body",
@@ -52,15 +54,46 @@ class MyButton extends StatelessWidget {
     return Container(
       width: 200,
       height: 40,
+      margin: const EdgeInsets.fromLTRB(0, 60, 0, 0),
       decoration: BoxDecoration(
         color: Colors.blue,
         borderRadius: BorderRadius.circular(10),
       ),
-      margin: const EdgeInsets.fromLTRB(0, 20, 0, 0),
       alignment: Alignment.center,
       child: const Text(
         "按钮",
         style: TextStyle(color: Colors.white, fontSize: 20),
+      ),
+    );
+  }
+}
+
+class MyText extends StatelessWidget {
+  const MyText({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 200,
+      height: 200,
+      margin: const EdgeInsets.fromLTRB(0, 40, 0, 0),
+      decoration: const BoxDecoration(
+        color: Colors.yellow,
+      ),
+      child: const Text(
+        "你好，我是Flutter",
+        style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.w900,
+            color: Colors.red,
+            fontStyle: FontStyle.italic,
+            letterSpacing: 2,
+            decoration: TextDecoration.underline,
+            decorationColor: Colors.black,
+            decorationStyle: TextDecorationStyle.dashed),
+        textAlign: TextAlign.left,
+        maxLines: 1,
+        overflow: TextOverflow.fade,
       ),
     );
   }
