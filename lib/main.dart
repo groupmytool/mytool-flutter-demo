@@ -4,7 +4,12 @@ void main() {
   runApp(MaterialApp(
     home: Scaffold(
       appBar: AppBar(title: const Text("你好 AppBar")),
-      body: const MyApp(),
+      body: const Column(
+        children: [
+          MyApp(),
+          MyButton(),
+        ],
+      ),
     ),
   ));
 }
@@ -25,21 +30,37 @@ class MyApp extends StatelessWidget {
               width: 2,
             ),
             borderRadius: BorderRadius.circular(10),
-            boxShadow: const [
-              BoxShadow(color: Colors.blue, blurRadius: 20.0)
-            ],
-          gradient: const LinearGradient(
-            colors: [
-              Colors.red,Colors.yellow
-            ]
-          )
-        ),
+            boxShadow: const [BoxShadow(color: Colors.blue, blurRadius: 20.0)],
+            gradient:
+                const LinearGradient(colors: [Colors.red, Colors.yellow])),
         alignment: Alignment.center,
         child: const Text(
           "你好 Body",
           textDirection: TextDirection.ltr,
           style: TextStyle(color: Colors.black, fontSize: 20),
         ),
+      ),
+    );
+  }
+}
+
+class MyButton extends StatelessWidget {
+  const MyButton({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 200,
+      height: 40,
+      decoration: BoxDecoration(
+        color: Colors.blue,
+        borderRadius: BorderRadius.circular(10),
+      ),
+      margin: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+      alignment: Alignment.center,
+      child: const Text(
+        "按钮",
+        style: TextStyle(color: Colors.white, fontSize: 20),
       ),
     );
   }
