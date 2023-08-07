@@ -6,9 +6,10 @@ void main() {
       appBar: AppBar(title: const Text("你好 AppBar")),
       body: const Column(
         children: [
-          MyApp(),
-          MyButton(),
-          MyText(),
+          // MyApp(),
+          // MyButton(),
+          // MyText(),
+          MyImage(),
         ],
       ),
     ),
@@ -34,7 +35,8 @@ class MyApp extends StatelessWidget {
             ),
             borderRadius: BorderRadius.circular(10),
             boxShadow: const [BoxShadow(color: Colors.blue, blurRadius: 20.0)],
-            gradient: const LinearGradient(colors: [Colors.red, Colors.yellow])),
+            gradient:
+                const LinearGradient(colors: [Colors.red, Colors.yellow])),
         alignment: Alignment.center,
         child: const Text(
           "你好 Body",
@@ -94,6 +96,27 @@ class MyText extends StatelessWidget {
         textAlign: TextAlign.left,
         maxLines: 1,
         overflow: TextOverflow.fade,
+      ),
+    );
+  }
+}
+
+class MyImage extends StatelessWidget {
+  const MyImage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        width: 200,
+        height: 200,
+        margin: const EdgeInsets.fromLTRB(0, 40, 0, 0),
+        decoration: const BoxDecoration(color: Colors.red,),
+        child: Image.network(
+          "https://pic.rmb.bdstatic.com/bjh/news/9de9ad628ccc6a6d1331ec620399d2d4.png",
+          scale: 2,
+          fit: BoxFit.fitHeight,
+        ),
       ),
     );
   }
