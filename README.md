@@ -44,8 +44,16 @@ flutter build ios --release
 # 6、使用爱思助手安装到手机即可
 ```
 
+## macos
+```shell
+flutter build macos --release -t lib/main.dart
+cd ./build/macos/Build/Products/Release/ && open . 
+```
+
 
 ## 参考
 * [网速监控组件](https://pub.dev/packages/internet_speed_test)
 * [在Flutter中在网速小于100kb时显示消息](https://www.volcengine.com/theme/4768282-R-7-1)
 * [flutter实战之常用模块：network_info_plus模块及其应用](https://bbs.huaweicloud.com/blogs/405630)
+* [Flutter 集成 Golang ](https://juejin.cn/post/7109806986006364196)
+
