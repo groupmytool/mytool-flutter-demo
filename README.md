@@ -12,7 +12,7 @@ A new Flutter project.
 * brew install flutter
 * 在idea中配置 brew 安装的 flutter SDK 路径
 
-# run
+# 调试运行
 ```shell
 # 检查可用设备
 flutter devices
@@ -20,6 +20,31 @@ flutter devices
 flutter run -d macos 
 # 遇到macOS安全权限问题，执行如下命令，允许任何来源，以方便运行Dart和Flutter
 sudo spctl --master-disable
+# idea中热加载，选择Terminal窗口后，键盘输入
+# r：热更新
+# R：热重启
+```
+
+日志信息如下：
+```
+flutter run -d macos                                                                                                        ✔  17:51:46 
+Launching lib/main.dart on macOS in debug mode...
+Building macOS application...                                           
+Syncing files to device macOS...                                    92ms
+
+Flutter run key commands.
+r Hot reload. 🔥🔥🔥
+R Hot restart.
+h List all available interactive commands.
+d Detach (terminate "flutter run" but leave application running).
+c Clear the screen
+q Quit (terminate the application on the device).
+
+A Dart VM Service on macOS is available at: http://127.0.0.1:54058/mM1JSv0wPUM=/
+The Flutter DevTools debugger and profiler on macOS is available at: http://127.0.0.1:9100?uri=http://127.0.0.1:54058/mM1JSv0wPUM=/
+
+Performing hot reload...                                                
+Reloaded 1 of 698 libraries in 428ms (compile: 59 ms, reload: 114 ms, reassemble: 217 ms).
 ```
 
 # build
