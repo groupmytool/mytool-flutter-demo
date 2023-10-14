@@ -2,20 +2,32 @@
 
 A new Flutter project.
 
-## Getting Started
+# 环境配置
 
-This project is a starting point for a Flutter application.
+## 插件安装
+* Flutter
+* Flutter Snippets
 
-A few resources to get you started if this is your first Flutter project:      
+## 环境配置
+* brew install flutter
+* 在idea中配置 brew 安装的 flutter SDK 路径
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# run
+```shell
+# 检查可用设备
+flutter devices
+# 指定设备并启动
+flutter run -d macos 
+# 遇到macOS安全权限问题，执行如下命令，允许任何来源，以方便运行Dart和Flutter
+sudo spctl --master-disable
+```
 
 # build
+
+有问题可以使用清理命令：
+```shell
+flutter clean
+```
 
 ## iOS
 
