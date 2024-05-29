@@ -12,6 +12,18 @@ A new Flutter project.
 * brew install flutter
 * 在idea中配置 brew 安装的 flutter SDK 路径
 
+## android
+安装 Android Studio 之后，你可以在 Android Studio 的设置中找到 Android SDK 的位置。在 Android Studio 的顶部菜单中，
+选择 "Preferences"（或 "Settings"，取决于你的操作系统），然后在左侧的菜单中选择 
+"Appearance & Behavior" > "System Settings" > "Android SDK"。在右侧的 "Android SDK Location" 中，
+你可以看到 Android SDK 的路径。 
+
+在这个路径下的 tools/bin/ 目录中，你应该可以找到 sdkmanager。你可以在命令行中使用这个路径来运行 sdkmanager。  
+如果你在这个路径下没有找到 sdkmanager，那么可能是你的 Android SDK 没有完全安装。
+在这种情况下，你可以在 Android Studio 的 "SDK Manager" 中选择安装 "Android SDK Command-line Tools"。
+
+![img.png](readme/android-command-line-tools.png)
+
 # 调试运行
 ```shell
 # 检查可用设备
